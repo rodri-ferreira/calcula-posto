@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fundo">
+        <div id="opacidade">
+            <div id="titulo">
+                <h1>Sistema do Posto</h1>
+            </div>
+
+            <div id="formulario">
+                <h2>A=Álcool <br> G=Gasolina</h2>
+                <div class="fomulario-compra">
+                    <form action="">
+                        <h2>Compra</h2>
+                        <label for=""><span class="esconder">tipo de</span> combustível:</label>
+                        <input type="text" id="combustivel" name="combustivel" autocomplete="off">
+                        <label for=""><span class="esconder">Quantidade de</span> litros:</label>
+                        <input type="number" id="litros" name="litros">
+                        <label for=""><span class="esconder">Valor a</span>  pagar:</label>
+                        <input type="number" id="pagar" name="pagar">
+
+                        <button type="button" onclick="calcular()">calcular</button>
+                    </form>
+                </div>
+
+                <div class="fomulario-compra" id="resumo">
+                    <form action="">
+                        <h2>Resumo</h2>
+                        <label for=""><span class="esconder">tipo de</span> combustível:</label>
+                        <input type="text" id="setTipoCombustivel" disabled>
+                        <label for=""><span class="esconder">Quantidade de</span> litros:</label>
+                        <input type="number" id="setLitros" disabled>
+                        <label for=""><span class="esconder">Valor a</span>  pagar:</label>
+                        <input type="number" id="setValorPagar" disabled>
+
+                        <button>Crédito</button>
+                        <button>Débito</button>
+                        <button>Dinheiro</button>
+                    </form>
+                </div>  
+                <button id="novo-calculo" type="button" onclick="location.reload()">Novo Calculo</button> 
+            </div>
+
+            <div id="tabela-precos">
+                <h2>tabela de Preços</h2>
+                <div class="informativos" id="gasolina">
+                    <h3>gasolina</h3>
+                    <h3>R$ 2,70</h3>
+                    <p>Até 25 litros desconto de 3% por litro. Acima de 25 litros desconto de 5% Por litro</p>
+                </div>
+
+                <div class="informativos" id="alcool">
+                    <h3>Álcool</h3>
+                    <h3>R$ 1,90</h3>
+                    <p>Até 25 litros desconto de 2% por litro. Acima de 25 litros desconto de 4% Por litro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
